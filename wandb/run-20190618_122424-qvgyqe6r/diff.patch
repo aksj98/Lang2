@@ -1,0 +1,66 @@
+diff --git a/imdb-lstm.py b/imdb-lstm.py
+index 3197a2a..cb32e5f 100644
+--- a/imdb-lstm.py
++++ b/imdb-lstm.py
+@@ -1,7 +1,7 @@
+ from keras.preprocessing import sequence
+ from keras.models import Sequential
+ from keras.layers import Dense, Dropout, Activation
+-from keras.layers import Embedding, LSTM
++from keras.layers import Embedding,CuDNNLSTM
+ from keras.layers import Conv1D, Flatten
+ from keras.datasets import imdb
+ import wandb
+@@ -37,7 +37,7 @@ model = Sequential()
+ model.add(Embedding(config.vocab_size,
+                     config.embedding_dims,
+                     input_length=config.maxlen))
+-model.add(LSTM(config.hidden_dims, activation="sigmoid"))
++model.add(CuDNNLSTM(config.hidden_dims))
+ model.add(Dense(1, activation='sigmoid'))
+ model.compile(loss='binary_crossentropy',
+               optimizer='rmsprop',
+diff --git a/perceptron.py b/perceptron.py
+index e6a17bb..828f93a 100644
+--- a/perceptron.py
++++ b/perceptron.py
+@@ -18,7 +18,7 @@ config = wandb.config
+ config.repeated_predictions = False
+ config.look_back = 20
+ 
+-def load_data(data_type="airline"):
++def load_data(data_type="sin"):
+     if data_type == "flu":
+         df = pd.read_csv('flusearches.csv')
+         data = df.flu.astype('float32').values
+diff --git a/rnn.py b/rnn.py
+index 977a7ad..fcf05ba 100644
+--- a/rnn.py
++++ b/rnn.py
+@@ -3,7 +3,7 @@ import pandas as pd
+ 
+ from keras.models import Sequential
+ from keras.layers import Dense, Flatten
+-from keras.layers import LSTM, SimpleRNN, Dropout
++from keras.layers import LSTM, SimpleRNN, Dropout,CuDNNLSTM
+ from keras.callbacks import LambdaCallback
+ 
+ import wandb
+@@ -16,7 +16,7 @@ wandb.init()
+ config = wandb.config
+ 
+ config.repeated_predictions = True
+-config.look_back = 4
++config.look_back = 6 # number of bloks b4 prediction happens
+ 
+ 
+ def load_data(data_type="airline"):
+@@ -63,7 +63,7 @@ testX = testX[:, :, np.newaxis]
+ 
+ # create and fit the RNN
+ model = Sequential()
+-model.add(LSTM(5, input_shape=(config.look_back, 1)))
++model.add(CuDNNLSTM(15, input_shape=(config.look_back, 1))) #first parameter represents the number of blocks that are remembered 
+ model.add(Dense(1))
+ model.compile(loss='mae', optimizer='rmsprop')
+ model.fit(trainX, trainY, epochs=1000, batch_size=40, validation_data=(testX, testY),  callbacks=[

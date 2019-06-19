@@ -1,0 +1,26 @@
+diff --git a/perceptron.py b/perceptron.py
+index e6a17bb..828f93a 100644
+--- a/perceptron.py
++++ b/perceptron.py
+@@ -18,7 +18,7 @@ config = wandb.config
+ config.repeated_predictions = False
+ config.look_back = 20
+ 
+-def load_data(data_type="airline"):
++def load_data(data_type="sin"):
+     if data_type == "flu":
+         df = pd.read_csv('flusearches.csv')
+         data = df.flu.astype('float32').values
+diff --git a/rnn.py b/rnn.py
+index 977a7ad..ba8b54e 100644
+--- a/rnn.py
++++ b/rnn.py
+@@ -63,7 +63,7 @@ testX = testX[:, :, np.newaxis]
+ 
+ # create and fit the RNN
+ model = Sequential()
+-model.add(LSTM(5, input_shape=(config.look_back, 1)))
++model.add(SimpleRNN(5, input_shape=(config.look_back, 1)))
+ model.add(Dense(1))
+ model.compile(loss='mae', optimizer='rmsprop')
+ model.fit(trainX, trainY, epochs=1000, batch_size=40, validation_data=(testX, testY),  callbacks=[

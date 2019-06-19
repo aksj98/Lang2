@@ -1,0 +1,8 @@
+wandb_version: 1
+
+look_back:
+  desc: null
+  value: 6
+repeated_predictions:
+  desc: null
+  value: true

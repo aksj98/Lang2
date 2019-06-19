@@ -1,0 +1,24 @@
+{
+    "root": "/home/jovyan/Lang2",
+    "git": {
+        "remote": "https://github.com/aksj98/Lang2.git",
+        "commit": "9c6b6a06331f60e7d363b20659d5569e73088f99"
+    },
+    "email": "akshaj.jain@gmail.com",
+    "startedAt": "2019-06-18T12:24:24.231431",
+    "host": "jupyter-aksj98",
+    "username": "jovyan",
+    "os": "Linux-4.14.119+-x86_64-with-debian-buster-sid",
+    "python": "3.7.3",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 2,
+    "program": "imdb-lstm.py",
+    "cuda": "10.1.168",
+    "args": [],
+    "state": "finished",
+    "heartbeatAt": "2019-06-18T12:33:40.881267",
+    "jobType": null,
+    "mode": "run",
+    "exitcode": 0
+}

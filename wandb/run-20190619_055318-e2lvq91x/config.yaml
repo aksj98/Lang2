@@ -1,0 +1,26 @@
+wandb_version: 1
+
+batch_size:
+  desc: null
+  value: 32
+embedding_dims:
+  desc: null
+  value: 50
+epochs:
+  desc: null
+  value: 50
+filters:
+  desc: null
+  value: 250
+hidden_dims:
+  desc: null
+  value: 100
+kernel_size:
+  desc: null
+  value: 3
+maxlen:
+  desc: null
+  value: 300
+vocab_size:
+  desc: null
+  value: 1000

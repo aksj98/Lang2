@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "rnn.py", line 66, in <module>
+    model.add(CuDNNLSTM(5, input_shape=(config.look_back, 1)))
+NameError: name 'CuDNNLSTM' is not defined

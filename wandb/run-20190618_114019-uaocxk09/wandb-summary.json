@@ -1,0 +1,61 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "cu_dnnlstm_1_input",
+                "id": "cu_dnnlstm_1_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    null,
+                    4,
+                    1
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "cu_dnnlstm_1",
+                "id": "cu_dnnlstm_1",
+                "class_name": "CuDNNLSTM",
+                "output_shape": [
+                    null,
+                    5
+                ],
+                "num_parameters": 160
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    1
+                ],
+                "num_parameters": 6
+            }
+        ],
+        "edges": [
+            [
+                "cu_dnnlstm_1_input",
+                "cu_dnnlstm_1"
+            ],
+            [
+                "cu_dnnlstm_1",
+                "dense_1"
+            ]
+        ]
+    },
+    "image": {
+        "width": 1000,
+        "height": 1000,
+        "count": 1,
+        "_type": "images"
+    },
+    "_step": 999,
+    "_runtime": 219.05207896232605,
+    "val_loss": 0.003352324561200152,
+    "_timestamp": 1560858237.5909386,
+    "epoch": 999,
+    "loss": 0.00318622157285861
+}

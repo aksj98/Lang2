@@ -1,0 +1,76 @@
+2019-06-19 05:53:19,063 DEBUG   MainThread:55 [wandb_config.py:_load_defaults():81] no defaults not found in config-defaults.yaml
+2019-06-19 05:53:19,065 DEBUG   MainThread:55 [cmd.py:execute():722] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,071 DEBUG   MainThread:55 [cmd.py:execute():722] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,092 DEBUG   MainThread:55 [cmd.py:execute():722] Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,125 DEBUG   MainThread:55 [cmd.py:execute():722] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,150 DEBUG   MainThread:55 [run_manager.py:__init__():460] Initialized sync for Lang2/e2lvq91x
+2019-06-19 05:53:19,153 INFO    MainThread:55 [run_manager.py:wrap_existing_process():1016] wrapping existing process 46
+2019-06-19 05:53:19,154 WARNING MainThread:55 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2019-06-19 05:53:19,158 DEBUG   MainThread:55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): pypi.org:443
+2019-06-19 05:53:19,246 DEBUG   MainThread:55 [connectionpool.py:_make_request():393] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 31736
+2019-06-19 05:53:19,262 INFO    MainThread:55 [run_manager.py:init_run():832] system metrics and metadata threads started
+2019-06-19 05:53:19,263 INFO    MainThread:55 [run_manager.py:init_run():866] upserting run before process can begin, waiting at most 10 seconds
+2019-06-19 05:53:19,263 DEBUG   Thread-13 :55 [cmd.py:execute():722] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,278 DEBUG   Thread-13 :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-06-19 05:53:19,392 DEBUG   Thread-13 :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 399
+2019-06-19 05:53:19,395 INFO    Thread-13 :55 [run_manager.py:_upsert_run():928] saving patches
+2019-06-19 05:53:19,395 DEBUG   Thread-13 :55 [cmd.py:execute():722] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,401 DEBUG   Thread-13 :55 [cmd.py:execute():722] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:19,457 DEBUG   Thread-13 :55 [cmd.py:execute():722] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:20,081 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:53:20,097 DEBUG   Thread-13 :55 [cmd.py:execute():722] Popen(['git', 'version'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:20,139 DEBUG   Thread-13 :55 [cmd.py:execute():722] Popen(['git', 'merge-base', 'HEAD', '9c6b6a06331f60e7d363b20659d5569e73088f99'], cwd=/home/jovyan/Lang2, universal_newlines=False, shell=None)
+2019-06-19 05:53:20,144 INFO    Thread-13 :55 [run_manager.py:_upsert_run():930] saving pip packages
+2019-06-19 05:53:20,145 INFO    Thread-13 :55 [run_manager.py:_upsert_run():932] initializing streaming files api
+2019-06-19 05:53:20,146 INFO    Thread-13 :55 [run_manager.py:_upsert_run():939] unblocking file change observer, beginning sync with W&B servers
+2019-06-19 05:53:20,146 INFO    MainThread:55 [run_manager.py:wrap_existing_process():1033] informing user process we are ready to proceed
+2019-06-19 05:53:20,150 INFO    MainThread:55 [run_manager.py:_sync_etc():1116] entering loop for messages from user process
+2019-06-19 05:53:21,079 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/requirements.txt
+2019-06-19 05:53:21,079 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/config.yaml
+2019-06-19 05:53:21,088 DEBUG   Thread-2  :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-06-19 05:53:21,179 DEBUG   Thread-2  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 810
+2019-06-19 05:53:21,181 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/diff.patch
+2019-06-19 05:53:21,184 DEBUG   Thread-14 :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-06-19 05:53:21,262 DEBUG   Thread-14 :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 749
+2019-06-19 05:53:21,266 DEBUG   Thread-14 :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-06-19 05:53:21,654 DEBUG   Thread-14 :55 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/univai-ss2019/Lang2/e2lvq91x/config.yaml?Expires=1560923661&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=RrwKRobH%2FTZhz%2FDRsXmRX702BWRlXaGwW7ctVYFzq6NLek247wGsLL53FVhBz4tz08WINVlEtN5k3ShkqOjcP8mT6bsKTnHzcbfDYLBW8wrsIKnZrNJKPPGZ78kY%2BiEzagYbLxRYSUw5PTlnDvplu38jOTEd8xDOrSLRHPBJGEGjCjOIa3q0x1nXT1FwukXKsqDAG68brLJs%2BE6cbx30Qyh4TzlIWmiLJiFTig8K4RZPgeIGbuez8xUYPsmt5zHEr0QK0e1IpYyx0rAlFOwz5x7%2FyK%2B%2BBALV7C7a2%2F79fL6QlmijjZP91rZXphIFBXj6zfnGAGeOgfomfsVZCPXkhA%3D%3D HTTP/1.1" 200 0
+2019-06-19 05:53:36,085 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:53:48,090 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-events.jsonl
+2019-06-19 05:53:48,094 DEBUG   Thread-6  :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-06-19 05:53:48,214 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:53:52,092 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:54:08,099 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:54:18,103 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-events.jsonl
+2019-06-19 05:54:18,206 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:54:24,106 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:54:40,114 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:54:48,117 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-events.jsonl
+2019-06-19 05:54:48,236 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:54:56,121 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:55:12,129 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:55:18,132 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-events.jsonl
+2019-06-19 05:55:18,263 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:55:28,142 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:55:31,463 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:55:32,824 INFO    MainThread:55 [run_manager.py:_sync_etc():1139] received message from user process: {"save_policy": {"glob": "model-best.h5", "policy": "live"}}
+2019-06-19 05:55:36,147 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-summary.json
+2019-06-19 05:55:41,498 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:55:44,152 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:55:48,154 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-events.jsonl
+2019-06-19 05:55:51,508 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:56:00,161 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:56:01,580 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:56:11,669 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:56:16,171 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:56:18,173 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-events.jsonl
+2019-06-19 05:56:26,632 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+2019-06-19 05:56:27,178 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-history.jsonl
+2019-06-19 05:56:27,181 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-summary.json
+2019-06-19 05:56:27,181 INFO    Thread-2  :55 [run_manager.py:_on_file_created():594] file/dir created: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/model-best.h5
+2019-06-19 05:56:27,191 DEBUG   Thread-17 :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-06-19 05:56:27,292 DEBUG   Thread-17 :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 761
+2019-06-19 05:56:27,299 DEBUG   Thread-17 :55 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-06-19 05:56:27,578 DEBUG   Thread-17 :55 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/univai-ss2019/Lang2/e2lvq91x/model-best.h5?Expires=1560923847&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=K1LCldrAzWk81kAc28pbpygyo2iWHI9NrvQhgFBy2xeXZoaSgEucCnhIVnx%2FWJJbhqiuFveCmp21J0xXdb8rH2SfX%2BXUJyD8VpyRU%2FJskABSwLzMoQGkQ8xUAYVJXslvq3%2FGisod7EtpX9YI6jSUvy6aSv0P%2FNNpQzK0h8lg%2Fm%2BTICApg7VeYFLE3BgdRIK12cYb4p53HTpcQytJRmciEj0OOb%2ByUt%2BS7uRmJTvhwnxzSHNzf7CT4kx8mBJLwddtkv2eFc2T0yvDBdIj8vefd%2FWLW1Wo3RxZ3KMexTWrCb%2F2TNrDWxbSmgoXqL03pVtW%2BPJZSG8iFM3Qs7ZKXKSxDg%3D%3D HTTP/1.1" 200 0
+2019-06-19 05:56:32,181 INFO    Thread-2  :55 [run_manager.py:_on_file_modified():605] file/dir modified: /home/jovyan/Lang2/wandb/run-20190619_055318-e2lvq91x/wandb-metadata.json
+2019-06-19 05:56:36,697 DEBUG   Thread-6  :55 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /univai-ss2019/Lang2/e2lvq91x/file_stream HTTP/1.1" 200 316
+tadata.json

@@ -1,0 +1,13 @@
+diff --git a/perceptron.py b/perceptron.py
+index e6a17bb..828f93a 100644
+--- a/perceptron.py
++++ b/perceptron.py
+@@ -18,7 +18,7 @@ config = wandb.config
+ config.repeated_predictions = False
+ config.look_back = 20
+ 
+-def load_data(data_type="airline"):
++def load_data(data_type="sin"):
+     if data_type == "flu":
+         df = pd.read_csv('flusearches.csv')
+         data = df.flu.astype('float32').values

@@ -1,0 +1,71 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "embedding_1_input",
+                "id": "embedding_1_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    null,
+                    300
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "embedding_1",
+                "id": "embedding_1",
+                "class_name": "Embedding",
+                "output_shape": [
+                    null,
+                    300,
+                    50
+                ],
+                "num_parameters": 50000
+            },
+            {
+                "name": "cu_dnngru_1",
+                "id": "cu_dnngru_1",
+                "class_name": "CuDNNGRU",
+                "output_shape": [
+                    null,
+                    100
+                ],
+                "num_parameters": 45600
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    1
+                ],
+                "num_parameters": 101
+            }
+        ],
+        "edges": [
+            [
+                "embedding_1_input",
+                "embedding_1"
+            ],
+            [
+                "embedding_1",
+                "cu_dnngru_1"
+            ],
+            [
+                "cu_dnngru_1",
+                "dense_1"
+            ]
+        ]
+    },
+    "loss": 0.6924728408241272,
+    "_timestamp": 1560923786.5489957,
+    "val_loss": 0.6887533605384827,
+    "acc": 0.50916,
+    "val_acc": 0.5326,
+    "epoch": 0,
+    "_runtime": 188.54351449012756,
+    "_step": 0
+}

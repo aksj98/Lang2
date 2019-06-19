@@ -1,0 +1,44 @@
+WARNING:tensorflow:From /opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /opt/conda/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Train on 25000 samples, validate on 25000 samples
+Epoch 1/50
+2019-06-18 12:47:07.478203: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-06-18 12:47:07.494148: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2300000000 Hz
+2019-06-18 12:47:07.494460: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x555acf320cf0 executing computations on platform Host. Devices:
+2019-06-18 12:47:07.494510: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-06-18 12:47:07.595991: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-06-18 12:47:07.597029: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x555acd3b45d0 executing computations on platform CUDA. Devices:
+2019-06-18 12:47:07.597082: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-06-18 12:47:07.597455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:00:05.0
+totalMemory: 11.17GiB freeMemory: 473.44MiB
+2019-06-18 12:47:07.597511: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-06-18 12:47:07.599077: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-06-18 12:47:07.599127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-06-18 12:47:07.599161: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-06-18 12:47:07.599339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 248 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:00:05.0, compute capability: 3.7)
+2019-06-18 12:47:10.763613: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2019-06-18 12:47:16.336989: E tensorflow/stream_executor/cuda/cuda_dnn.cc:334] Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+2019-06-18 12:47:16.337655: W tensorflow/core/framework/op_kernel.cc:1401] OP_REQUIRES failed at cudnn_rnn_ops.cc:1217 : Unknown: Fail to find the dnn implementation.
+Traceback (most recent call last):
+  File "imdb-lstm.py", line 49, in <module>
+    validation_data=(X_test, y_test), callbacks=[WandbCallback()])
+  File "/opt/conda/lib/python3.7/site-packages/keras/engine/training.py", line 1039, in fit
+    validation_steps=validation_steps)
+  File "/opt/conda/lib/python3.7/site-packages/keras/engine/training_arrays.py", line 199, in fit_loop
+    outs = f(ins_batch)
+  File "/opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py", line 2715, in __call__
+    return self._call(inputs)
+  File "/opt/conda/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py", line 2675, in _call
+    fetched = self._callable_fn(*array_vals)
+  File "/opt/conda/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 1439, in __call__
+    run_metadata_ptr)
+  File "/opt/conda/lib/python3.7/site-packages/tensorflow/python/framework/errors_impl.py", line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.UnknownError: Fail to find the dnn implementation.
+	 [[{{node cu_dnngru_1/CudnnRNN}}]]
